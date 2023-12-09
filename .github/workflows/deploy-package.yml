@@ -2,7 +2,7 @@ name: Build and deploy docker image
 run-name: ${{ github.actor }} is building a new version
 on:
   push:
-    branches: ['dev' , 'main']
+    branches: ['dev' , 'main', 'master']
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
