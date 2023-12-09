@@ -11,3 +11,6 @@ def read_root():
 @app.get('/item/{item_id}')
 def read_item(item_id: int , message: Union[str,None] = None):
     return {"item_id": item_id , "message":message}
+
+if __name__ == "__main__":
+    print("Application is up and running in container")
