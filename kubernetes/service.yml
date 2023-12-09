@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-hello-rest-loadbalancer
+  labels:
+    app: fastapi-hello-rest
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 4590
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: fastapi-hello-rest

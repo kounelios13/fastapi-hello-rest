@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-hello-rest-deployment
+  labels:
+    app: fastapi-hello-rest
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fastapi-hello-rest
+  template:
+    metadata:
+      labels:
+        app: fastapi-hello-rest
+    spec:
+      containers:
+      - name: fastapi-hello-rest-container
+        image: ghcr.io/kounelios13/fastapi-hello-rest:latest
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: gh-registry
