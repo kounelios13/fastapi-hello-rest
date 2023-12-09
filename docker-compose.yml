@@ -1,0 +1,5 @@
+services:
+  fastapi-web:
+    image: fastapi-demo:latest
+    ports:
+      - "8787:80"

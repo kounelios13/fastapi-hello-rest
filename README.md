@@ -1,0 +1,1 @@
+Simple demo for kuberneted deployment
